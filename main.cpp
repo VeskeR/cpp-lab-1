@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "railroadticket.h"
+#include "railroadpassenger.h"
 
 using namespace std;
 
@@ -8,15 +9,15 @@ int main(int argc, char *argv[])
 {
     RailroadTicket ticket("Andrey Bulat", "Kiev", "chernivtsi", "Platzkart", 118, 1, 48);
 
-    cout << endl << endl;
-    cout << "Output of get* methods:" << endl << endl;
-    cout << ticket.getPassengerName() << endl;
-    cout << ticket.getFromLocation() << endl;
-    cout << ticket.getToLocation() << endl;
-    cout << ticket.getTicketType() << endl;
-    cout << ticket.getTrainNumber() << endl;
-    cout << ticket.getCoachNumber() << endl;
-    cout << ticket.getSeatNumber() << endl << endl;
+    cout << endl << endl
+         << "Output of get* methods:" << endl << endl
+         << ticket.getPassengerName() << endl
+         << ticket.getFromLocation() << endl
+         << ticket.getToLocation() << endl
+         << ticket.getTicketType() << endl
+         << ticket.getTrainNumber() << endl
+         << ticket.getCoachNumber() << endl
+         << ticket.getSeatNumber() << endl << endl;
 
     cout << "Output of toString() method:" << endl << endl;
     cout << ticket.toString() << endl << endl;
@@ -32,5 +33,16 @@ int main(int argc, char *argv[])
         cout << "Ticket #" << i + 1 << endl;
         cout << tickets[i].toString() << endl << endl;
     }
+
+    RailroadPassenger p1;
+    p1.firstName = "Andrew";
+    p1.lastName = "Bulat";
+    p1.ticketId = 0;
+
+    cout << endl << "Working with structures:" << endl;
+    cout << "First name: " + p1.firstName << endl
+         << "Last name: " + p1.lastName << endl
+         << "Ticket ID: " << p1.ticketId << endl;
+
     return 0;
 }
